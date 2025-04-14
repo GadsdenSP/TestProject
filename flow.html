@@ -40,6 +40,11 @@
       font-size: 2rem;
       color: #555;
     }
+    ul {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      padding-left: 1.2rem;
+    }
   </style>
 </head>
 <body>
@@ -64,8 +69,8 @@
     <div class="arrow">↓</div>
 
     <div class="step">
-      <h2>4. Sign Content</h2>
-      <p>The creator digitally signs the hash and metadata with their private key or wallet.</p>
+      <h2>4. Sign Content & Metadata</h2>
+      <p>The creator digitally signs the hash and metadata with their private key or wallet. This binds them to the content and context.</p>
     </div>
     <div class="arrow">↓</div>
 
@@ -76,14 +81,21 @@
     <div class="arrow">↓</div>
 
     <div class="step">
-      <h2>6. Add Endorsements (Optional)</h2>
-      <p>Trusted parties can review and endorse the package, adding signatures and comments.</p>
+      <h2>6. Validation & Trust Layer (Optional)</h2>
+      <p>Validators (humans, DAOs, AI agents) review the Anne Package and may endorse it by signing. These signatures increase trust and help platforms make informed decisions.</p>
     </div>
     <div class="arrow">↓</div>
 
     <div class="step">
-      <h2>7. Verify Integrity</h2>
-      <p>Anyone can later check the hash, metadata, and signatures to verify authenticity.</p>
+      <h2>7. Verification</h2>
+      <p>Any verifier can now check:</p>
+      <ul>
+        <li>✔️ Content hash matches the actual file</li>
+        <li>✔️ Origin signature is valid</li>
+        <li>✔️ Metadata has integrity</li>
+        <li>✔️ Endorsements are real and optionally trusted</li>
+      </ul>
+      <p>This process reveals if content is authentic, manipulated, or unverifiable.</p>
     </div>
   </div>
 </body>
