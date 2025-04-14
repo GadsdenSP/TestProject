@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Anne Visualizer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+    #toolbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #222;
+      color: white;
+      padding: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    #canvas {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 50px);
+      background: #f0f0f0;
+      overflow: hidden;
+    }
+    .node {
+      width: 100px;
+      height: 50px;
+      background: #fff;
+      border: 2px solid #000;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: grab;
+      user-select: none;
+    }
+    .external-zone {
+      position: absolute;
+      right: 0;
+      top: 50px;
+      width: 150px;
+      height: calc(100vh - 50px);
+      background: rgba(255, 0, 0, 0.1);
+      border-left: 2px dashed red;
+      text-align: center;
+      padding-top: 10px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div id="toolbar">
+    <button onclick="addNode('Node')">Node</button>
+    <button onclick="addNode('User')">User</button>
+    <button onclick="addNode('Validator')">Validator</button>
+    <button onclick="addNode('Website')">Website</button>
+    <button onclick="addNode('Device')">Device</button>
+    <button onclick="addNode('App')">App</button>
+    <button onclick="addData('Neutral')">Data: Neutral</button>
+    <button onclick="addData('AI')">Data: AI</button>
+    <button onclick="addData('Tampered')">Data: Tampered</button>
+    <button onclick="addData('Illegal')">Data: Illegal</button>
+    <button onclick="addData('Crypto')">Data: Crypto</button>
+    <button onclick="addData('Harmful')">Data: Harmful</button>
+  </div>
+  <div id="canvas"></div>
+  <div class="external-zone">External Inputs</div>
+
+  <script>
+    let canvas = document.getElementById('canvas');
+
+    function addNode(label) {
+      const div = document.createElement('div');
+      div.className = 'node';
+      div.style.top = '100px';
+      div.style.left = '100px';
+      div.innerText = label;
+      makeDraggable(div);
+      canvas.appendChild(div);
+    }
+
+    function addData(label) {
+      const div = document.createElement('div');
+      div.className = 'node';
+      div.style.top = '200px';
+      div.style.left = '200px';
+      div.style.background = getColor(label);
+      div.innerText = label;
+      makeDraggable(div);
+      canvas.appendChild(div);
+    }
+
+    function getColor(label) {
+      switch(label) {
+        case 'Neutral': return '#ccc';
+        case 'AI': return '#a0c4ff';
+        case 'Tampered': return '#ffadad';
+        case 'Illegal': return '#ff8787';
+        case 'Crypto': return '#ffd6a5';
+        case 'Harmful': return '#ffc6ff';
+        default: return '#fff';
+      }
+    }
+
+    function makeDraggable(element) {
+      let offsetX, offsetY;
+      element.addEventListener('mousedown', e => {
+        offsetX = e.offsetX;
+        offsetY = e.offsetY;
+        function move(e) {
+          element.style.left = e.pageX - offsetX + 'px';
+          element.style.top = e.pageY - offsetY + 'px';
+        }
+        document.addEventListener('mousemove', move);
+        document.addEventListener('mouseup', () => {
+          document.removeEventListener('mousemove', move);
+        }, { once: true });
+      });
+    }
+  </script>
+</body>
+</html>
