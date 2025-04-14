@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Anne – Protocol Flow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #111;
+      color: #eee;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 3rem;
+    }
+    .grid {
+      display: grid;
+      gap: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .step {
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 1.5rem;
+      background-color: #1a1a1a;
+    }
+    .step h2 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #90cdf4;
+    }
+    .arrow {
+      text-align: center;
+      font-size: 2rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Project Anne – Protocol Flow</h1>
+  <div class="grid">
+    <div class="step">
+      <h2>1. Create Content</h2>
+      <p>The user writes, records, or generates something — text, image, audio, or video.</p>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <h2>2. Generate Hash</h2>
+      <p>The content is hashed using SHA-256. This creates a unique fingerprint.</p>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <h2>3. Add Metadata</h2>
+      <p>Attach origin info: creator ID, device data, AI model (if applicable), and timestamp.</p>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <h2>4. Sign Content</h2>
+      <p>The creator digitally signs the hash and metadata with their private key or wallet.</p>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <h2>5. Build Anne Package</h2>
+      <p>Everything is wrapped into a verifiable JSON object — the Anne Package.</p>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <h2>6. Add Endorsements (Optional)</h2>
+      <p>Trusted parties can review and endorse the package, adding signatures and comments.</p>
+    </div>
+    <div class="arrow">↓</div>
+
+    <div class="step">
+      <h2>7. Verify Integrity</h2>
+      <p>Anyone can later check the hash, metadata, and signatures to verify authenticity.</p>
+    </div>
+  </div>
+</body>
+</html>
