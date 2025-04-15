@@ -57,52 +57,44 @@
 
   <div class="section">
     <h2>II. How It Works</h2>
-    <p>
-      Anne is not an app. It is not a platform, and it is not a product. It is a protocol — a standard that anyone can adopt to make digital content verifiable from the moment it is created.
-    </p>
   
     <p>
-      When you create a piece of content — whether that’s a photo, a video, an AI-generated sentence, or a handwritten poem scanned into your phone — Anne gives you a way to package that file with proof: proof of authorship, proof of origin, and proof of timing.
+      Anne allows any digital file — photo, video, text, AI output — to be sealed with proof of origin, authorship, and time. Unlike anything else in the world, Anne creates trust without relying on platforms or institutions.
     </p>
   
-    <p>
-      The file is first hashed. This means it is turned into a cryptographic fingerprint — a unique code that will only ever match that exact file. If even one pixel or character changes, the fingerprint becomes invalid. It is the digital equivalent of sealing an envelope with wax: once broken, it cannot be resealed the same way.
-    </p>
+    <div id="fullExplanation" style="display: none;">
+      <p>
+        Anne is not an app. It is not a platform, and it is not a product. It is a protocol — a standard that anyone can adopt to make digital content verifiable from the moment it is created.
+      </p>
+      <p>
+        When you create a piece of content — whether that’s a photo, a video, an AI-generated sentence, or a handwritten poem scanned into your phone — Anne gives you a way to package that file with proof: proof of authorship, proof of origin, and proof of timing.
+      </p>
+      <p>
+        The file is first hashed. This means it is turned into a cryptographic fingerprint — a unique code that will only ever match that exact file. If even one pixel or character changes, the fingerprint becomes invalid. It is the digital equivalent of sealing an envelope with wax: once broken, it cannot be resealed the same way.
+      </p>
+      <p>
+        Next, the creator — whether a person, a device, or even an AI system — signs this fingerprint. This signature links the content to its origin. The signature can be anonymous, pseudonymous, or public. It can be tied to a wallet, a device key, a platform identity, or a private key held by a journalist, artist, or citizen.
+      </p>
+      <p>
+        Then comes metadata: the package stores information about when the content was created, how, and where — all depending on what the creator chooses to include. It may list the device used (like a specific camera model), whether an AI was involved (and which one), or the app that was used to generate it. This part is flexible, open, and extendable.
+      </p>
+      <p>
+        All of this — the hash, the signature, the metadata — is bundled into a small JSON-based file called an Anne Package. It travels with the content or alongside it. Anyone who sees the file can choose to verify its integrity using simple open tools, or ignore it altogether.
+      </p>
+      <p>
+        Others — news agencies, whistleblower platforms, researchers, even AIs — can endorse a package. Their signatures are added like stamps in a passport. These endorsements don’t guarantee truth — but they guarantee traceability and accountability. You can choose whom to trust based on who was willing to sign.
+      </p>
+      <p>
+        Why is this important? Because no mainstream standard exists to prove who made a file, when it was made, or whether it has been altered. The internet is overflowing with manipulated content. Anne doesn’t block or censor — it exposes what can be proven.
+      </p>
+      <p>
+        In a future filled with deepfakes and AI mimicry, Anne gives people one final edge: the ability to say, “This file has a past. And here’s how you can check it.”
+      </p>
+    </div>
   
-    <p>
-      Next, the creator — whether a person, a device, or even an AI system — signs this fingerprint. This signature links the content to its origin. The signature can be anonymous, pseudonymous, or public. It can be tied to a wallet, a device key, a platform identity, or a private key held by a journalist, artist, or citizen.
-    </p>
-  
-    <p>
-      Then comes metadata: the package stores information about when the content was created, how, and where — all depending on what the creator chooses to include. It may list the device used (like a specific camera model), whether an AI was involved (and which one), or the app that was used to generate it. This part is flexible, open, and extendable.
-    </p>
-  
-    <p>
-      All of this — the hash, the signature, the metadata — is bundled into a small JSON-based file called an Anne Package. It travels with the content or alongside it. Anyone who sees the file can choose to verify its integrity using simple open tools, or ignore it altogether.
-    </p>
-  
-    <p>
-      But Anne doesn’t stop at creation. Others — news agencies, whistleblower platforms, researchers, even AIs — can endorse a package. This means they’ve reviewed it and believe it’s authentic. Their signatures are added like stamps in a passport. These endorsements don’t guarantee truth — but they guarantee traceability and accountability. You can choose whom to trust based on who was willing to sign.
-    </p>
-  
-    <p>
-      Why is this important? Because today, no mainstream standard exists to prove who made a file, when it was made, or whether it has been altered. The internet is overflowing with manipulated content, reposted lies, and videos taken out of context. Platforms struggle to moderate. Users struggle to trust. Algorithms can’t tell real from fake.
-    </p>
-  
-    <p>
-      Anne is not another attempt to moderate the web. It is a minimal protocol that restores the possibility of trust — not through control, but through proof. It doesn’t block content. It doesn’t report users. It simply makes veracity visible.
-    </p>
-  
-    <p>
-      There is nothing like Anne in the world today. Other systems try to guess what’s real by analyzing pixels, studying behavior, or relying on gatekeepers. Anne doesn’t guess. It remembers. It reveals. It holds a record. If a file has been altered, Anne will say so. If it was signed, you can see who signed it. If it was endorsed, you can trace the chain.
-    </p>
-  
-    <p>
-      In a future where deepfakes are indistinguishable from real events, and AI can simulate anything with perfect clarity, Anne gives us one final edge: the ability to say, “This file has a past. And here’s how you can check it.”
-    </p>
-  
+    <a href="#" onclick="toggleExplanation(event)">View More</a>
     <img src="diagram.png" alt="Anne Architecture Diagram" class="diagram">
-  </div>  
+  </div>
 
   <hr>
   
@@ -128,4 +120,19 @@
 </footer>
   
 </body>
+<script>
+  function toggleExplanation(event) {
+    event.preventDefault();
+    const section = document.getElementById("fullExplanation");
+    const link = event.target;
+
+    if (section.style.display === "none") {
+      section.style.display = "block";
+      link.textContent = "View Less";
+    } else {
+      section.style.display = "none";
+      link.textContent = "View More";
+    }
+  }
+</script>
 </html>
