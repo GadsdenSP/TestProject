@@ -1,0 +1,68 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  #toolbar {
+    height: 50px;
+    background: #222;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 8px;
+    z-index: 2;
+  }
+  
+  #canvas {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #f0f0f0;
+    overflow: hidden;
+  }
+  
+  .external-zone {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 150px;
+    height: calc(100vh - 50px);
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 2px dashed red;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  
+  .warning-text {
+    position: absolute;
+    right: 150px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right center;
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+    z-index: 1;
+  }
+  
+  .tool-button {
+    background: #444;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    border-radius: 4px;
+  }
+  
+  .tool-button:hover {
+    background: #555;
+  }
+  
