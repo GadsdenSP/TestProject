@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project ANNE</title>
+  <title>Proyecto ANNE</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -40,40 +40,79 @@
   </style>
 </head>
 <body>
-  <h1>Project ANNE</h1>
-  <p><em>Attested Network Neutral Experience <br>
-              (or a decentralised protocol)</em></p>
+  <h1>Proyecto ANNE</h1>
+  <p><em>Attested Network Neutral Experience<br>
+              (o un protocolo descentralizado)</em></p>
 
     <div class="section">
-    <h2>I. Manifesto</h2>
+    <h2>I. Manifiesto</h2>
     <p>
-      In a world where digital content proliferates without bounds, the need for verifiable truth,
-      transparent authorship, and traceable origins has become essential...
+      En un mundo donde el contenido digital prolifera sin límites, la necesidad de una verdad verificable,
+      una autoría transparente y orígenes rastreables se ha vuelto esencial...
     </p>
-    <a href="manifesto.html">Read our Manifesto</a>
+    <a href="manifesto.html">Leer nuestro manifiesto</a>
   </div>
 
   <hr>
 
   <div class="section">
-    <h2>II. How It Works</h2>
-    <p>Each file is hashed, signed, and wrapped in a verifiable package. This package contains origin metadata, creation time, optional device/AI details, and can include endorsements from others.</p>
-    <img src="diagram.png" alt="Anne Architecture Diagram" class="diagram">
+    <h2>II. Cómo Funciona</h2>
+  
+    <p>
+      Anne permite que cualquier archivo digital — foto, video, texto, salida de IA — sea sellado con prueba de origen, autoría y momento de creación. A diferencia de todo lo que existe, Anne genera confianza sin depender de plataformas ni instituciones.
+    </p>
+  
+    <div id="fullExplanation" style="display: none;">
+      <p>
+        Anne no es una aplicación. No es una plataforma, ni un producto. Es un protocolo — un estándar que cualquiera puede adoptar para hacer que el contenido digital sea verificable desde su creación.
+      </p>
+      <p>
+        Cuando creas un contenido — ya sea una foto, un video, una frase generada por IA o un poema manuscrito escaneado — Anne te da una forma de empaquetar ese archivo con pruebas: prueba de autoría, de origen y de tiempo.
+      </p>
+      <p>
+        El archivo se somete primero a un hash. Esto significa que se convierte en una huella criptográfica — un código único que solo coincidirá con ese archivo exacto. Si se cambia un solo píxel o carácter, la huella ya no es válida. Es el equivalente digital a sellar un sobre con cera: una vez roto, no puede volver a sellarse igual.
+      </p>
+      <p>
+        A continuación, el creador — ya sea una persona, un dispositivo o incluso un sistema de IA — firma esta huella. Esta firma vincula el contenido con su origen. Puede ser anónima, seudónima o pública. Puede estar asociada a una billetera digital, una clave de dispositivo, una identidad de plataforma o una clave privada de un periodista, artista o ciudadano.
+      </p>
+      <p>
+        Luego viene la metadata: el paquete almacena información sobre cuándo, cómo y dónde fue creado el contenido — dependiendo de lo que el creador elija incluir. Puede incluir el dispositivo usado (como un modelo específico de cámara), si participó una IA (y cuál), o la aplicación utilizada para generarlo. Esta parte es flexible, abierta y ampliable.
+      </p>
+      <p>
+        Todo esto — el hash, la firma y los metadatos — se agrupa en un pequeño archivo basado en JSON llamado Paquete Anne. Viaja con el contenido o junto a él. Cualquiera que vea el archivo puede verificar su integridad con herramientas abiertas y simples, o ignorarlo completamente.
+      </p>
+      <p>
+        Otros — agencias de noticias, plataformas de denuncias, investigadores, incluso IAs — pueden respaldar un paquete. Sus firmas se añaden como sellos en un pasaporte. Estos respaldos no garantizan la verdad — pero sí la trazabilidad y la responsabilidad. Puedes decidir en quién confiar según quién haya estado dispuesto a firmar.
+      </p>
+      <p>
+        ¿Por qué es importante? Porque no existe un estándar común para probar quién creó un archivo, cuándo lo hizo o si fue modificado. Internet está repleta de contenido manipulado. Anne no bloquea ni censura — revela lo que puede probarse.
+      </p>
+      <p>
+        En un futuro lleno de deepfakes e imitaciones generadas por IA, Anne da a las personas una ventaja definitiva: la capacidad de decir “Este archivo tiene un pasado. Y aquí puedes comprobarlo.”
+      </p>
+    </div>
+  
+    <a href="#" onclick="toggleExplanation(event)">Ver más</a>
+    <img src="diagram.png" alt="Diagrama de la Arquitectura de Anne" class="diagram">
   </div>
 
   <hr>
   
   <div class="section">
-    <h2>III. Protocol</h2>
-    <p>Each file is hashed, signed, and wrapped in a verifiable package. This package contains origin metadata, creation time, optional device/AI details, and can include endorsements from others.</p>
-    <a href= "flow.html">Flow Mockup</a></p>
+    <h2>III. Protocolo</h2>
+    <p>Cada archivo es hasheado, firmado y empaquetado en un contenedor verificable. Este paquete contiene metadatos de origen, fecha de creación, detalles opcionales sobre el dispositivo o IA, y puede incluir respaldos de terceros.</p>
+    <a href="flow.html">Mockup del Flujo</a></p>
   </div>
 
   <div class="section">
-    <h2>IV. Get Involved</h2>
-    <p>Check out the specification, try the CLI tool, or contribute your ideas. This is a protocol for builders, critics, and protectors of reality.</p>
-    <p><a href="Visualizer/Index.html">Visit the Visualizer (soon)</a></p>
+    <h2>IV. Participa</h2>
+    <p>Consulta la especificación, prueba la herramienta CLI o aporta tus ideas. Este es un protocolo para constructores, críticos y defensores de la realidad.</p>
+    <p><a href="#">Visitar el Visualizador (próximamente)</a></p>
   </div>
+
+  <!--<div class="section">
+    <p><a href="manifesto2.html">Manifiesto 2</a></p>
+  </div>!-->
 
   <hr>
 <footer style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 3rem;">
@@ -81,4 +120,19 @@
 </footer>
   
 </body>
+<script>
+  function toggleExplanation(event) {
+    event.preventDefault();
+    const section = document.getElementById("fullExplanation");
+    const link = event.target;
+
+    if (section.style.display === "none") {
+      section.style.display = "block";
+      link.textContent = "Ver menos";
+    } else {
+      section.style.display = "none";
+      link.textContent = "Ver más";
+    }
+  }
+</script>
 </html>

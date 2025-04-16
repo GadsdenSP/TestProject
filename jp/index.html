@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project ANNE</title>
+  <title>プロジェクト ANNE</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -40,40 +40,79 @@
   </style>
 </head>
 <body>
-  <h1>Project ANNE</h1>
-  <p><em>Attested Network Neutral Experience <br>
-              (or a decentralised protocol)</em></p>
+  <h1>プロジェクト ANNE</h1>
+  <p><em>Attested Network Neutral Experience<br>
+              （または分散型プロトコル）</em></p>
 
     <div class="section">
-    <h2>I. Manifesto</h2>
+    <h2>I. マニフェスト</h2>
     <p>
-      In a world where digital content proliferates without bounds, the need for verifiable truth,
-      transparent authorship, and traceable origins has become essential...
+      デジタルコンテンツが無限に拡散される世界において、検証可能な真実、
+      透明な作者情報、追跡可能な起源の必要性が不可欠になっています...
     </p>
-    <a href="manifesto.html">Read our Manifesto</a>
+    <a href="manifesto.html">マニフェストを読む</a>
   </div>
 
   <hr>
 
   <div class="section">
-    <h2>II. How It Works</h2>
-    <p>Each file is hashed, signed, and wrapped in a verifiable package. This package contains origin metadata, creation time, optional device/AI details, and can include endorsements from others.</p>
-    <img src="diagram.png" alt="Anne Architecture Diagram" class="diagram">
+    <h2>II. 仕組み</h2>
+  
+    <p>
+      Anneは、写真、ビデオ、テキスト、AI出力など、あらゆるデジタルファイルに対して、起源・著作者・作成時刻の証明を付加することを可能にします。Anneは、他に類を見ない形で、プラットフォームや機関に頼ることなく信頼を構築します。
+    </p>
+  
+    <div id="fullExplanation" style="display: none;">
+      <p>
+        Anneはアプリではありません。プラットフォームでも製品でもありません。これはプロトコルです — 誰でも採用できる、デジタルコンテンツを検証可能にするための標準です。
+      </p>
+      <p>
+        写真、ビデオ、AIが生成した文、手書きの詩をスキャンしたものなど、あなたが何らかのコンテンツを作成するとき、Anneはそのファイルに証明をパッケージ化する方法を提供します：著者の証明、起源の証明、時刻の証明です。
+      </p>
+      <p>
+        ファイルはまずハッシュ化されます。つまり、暗号学的なフィンガープリント（指紋） — そのファイルにしか一致しない一意のコードに変換されます。1ピクセルでも1文字でも変更されれば、その指紋は無効になります。これは、封筒を蝋で封印するようなデジタル的な等価物であり、一度壊れたら同じ方法で再封印できません。
+      </p>
+      <p>
+        次に、作成者 — 人間、デバイス、またはAIシステム — がこのフィンガープリントに署名します。この署名により、コンテンツがその出所と結びつきます。署名は匿名でも、偽名でも、公的でも可能です。ウォレット、デバイスキー、プラットフォームID、あるいはジャーナリストや市民が所有する秘密鍵に関連付けられることもあります。
+      </p>
+      <p>
+        そしてメタデータです：このパッケージには、コンテンツが「いつ・どのように・どこで」作成されたかの情報が含まれます（これは作成者が含めたい情報に依存します）。使用されたデバイス（特定のカメラモデルなど）、関与したAI（およびその種類）、使用されたアプリなどを記載できます。この部分は柔軟で、拡張可能です。
+      </p>
+      <p>
+        これらすべて — ハッシュ、署名、メタデータ — はAnneパッケージと呼ばれる小さなJSON形式のファイルにまとめられます。このパッケージはコンテンツとともに、またはそれに添えて移動します。誰でもこのファイルを見て、オープンなツールでその整合性を検証したり、無視したりできます。
+      </p>
+      <p>
+        他の者 — 報道機関、内部告発プラットフォーム、研究者、AIなど — がこのパッケージを承認することができます。彼らの署名はパスポートのスタンプのように追加されます。これらの承認は真実を保証するわけではありませんが、追跡性と責任を保証します。誰を信頼するかは、署名する意思を示した人によって選ぶことができます。
+      </p>
+      <p>
+        なぜこれが重要なのか？ ファイルを「誰が」「いつ」「どのように」作ったのか、あるいは改変されたのかを証明できる主流の標準が存在しないからです。インターネットは改ざんされたコンテンツで溢れています。Anneはブロックしたり検閲したりしません — 証明可能なものを明らかにします。
+      </p>
+      <p>
+        ディープフェイクやAI模倣が蔓延する未来において、Anneは人々に最後の武器を与えます：「このファイルには過去がある。これがその確認方法だ」と言う力です。
+      </p>
+    </div>
+  
+    <a href="#" onclick="toggleExplanation(event)">もっと見る</a>
+    <img src="diagram.png" alt="Anneアーキテクチャ図" class="diagram">
   </div>
 
   <hr>
   
   <div class="section">
-    <h2>III. Protocol</h2>
-    <p>Each file is hashed, signed, and wrapped in a verifiable package. This package contains origin metadata, creation time, optional device/AI details, and can include endorsements from others.</p>
-    <a href= "flow.html">Flow Mockup</a></p>
+    <h2>III. プロトコル</h2>
+    <p>各ファイルはハッシュ化され、署名され、検証可能なパッケージにまとめられます。このパッケージには、起源のメタデータ、作成日時、任意のデバイス/AI情報、第三者の承認が含まれることがあります。</p>
+    <a href= "flow.html">フローモックアップ</a></p>
   </div>
 
   <div class="section">
-    <h2>IV. Get Involved</h2>
-    <p>Check out the specification, try the CLI tool, or contribute your ideas. This is a protocol for builders, critics, and protectors of reality.</p>
-    <p><a href="Visualizer/Index.html">Visit the Visualizer (soon)</a></p>
+    <h2>IV. 参加する</h2>
+    <p>仕様をチェックしたり、CLIツールを試したり、アイデアを提供したりしましょう。このプロトコルは、創造者、批評家、そして現実の守護者のためのものです。</p>
+    <p><a href="#">ビジュアライザーを見る（近日公開）</a></p>
   </div>
+
+  <!--<div class="section">
+    <p><a href="manifesto2.html">マニフェスト2</a></p>
+  </div>!-->
 
   <hr>
 <footer style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 3rem;">
@@ -81,4 +120,19 @@
 </footer>
   
 </body>
+<script>
+  function toggleExplanation(event) {
+    event.preventDefault();
+    const section = document.getElementById("fullExplanation");
+    const link = event.target;
+
+    if (section.style.display === "none") {
+      section.style.display = "block";
+      link.textContent = "少なく表示";
+    } else {
+      section.style.display = "none";
+      link.textContent = "もっと見る";
+    }
+  }
+</script>
 </html>

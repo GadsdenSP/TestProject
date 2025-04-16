@@ -40,6 +40,17 @@
   </style>
 </head>
 <body>
+  <div style="text-align: right; margin-bottom: 1rem;">
+    <label for="language-select" style="margin-right: 0.5rem;">🌐 Language:</label>
+    <select id="language-select" onchange="changeLanguage()" style="background-color: #111; color: #eee; border: 1px solid #333;">
+      <option value="/">English</option>
+      <option value="/TestProject/pt-br/index.html">Português (BR)</option>
+      <option value="/TestProject/es/index.html">Español</option>
+      <option value="/TestProject/fr/index.html">Français</option>
+      <option value="/TestProject/jp/index.html">日本語</option>
+      <!-- Add zh or others as needed -->
+    </select>
+  </div>
   <h1>Project ANNE</h1>
   <p><em>Attested Network Neutral Experience <br>
               (or a decentralised protocol)</em></p>
@@ -107,12 +118,12 @@
   <div class="section">
     <h2>IV. Get Involved</h2>
     <p>Check out the specification, try the CLI tool, or contribute your ideas. This is a protocol for builders, critics, and protectors of reality.</p>
-    <p><a href="Visualizer/main.html">Visit the Visualizer (soon)</a></p>
+    <p><a href="#">Visit the Visualizer (soon)</a></p>
   </div>
 
-  <div class="section">
+  <!--<div class="section">
     <p><a href="manifesto2.html">Manifesto 2</a></p>
-  </div>
+  </div>!-->
 
   <hr>
 <footer style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 3rem;">
@@ -133,6 +144,13 @@
       section.style.display = "none";
       link.textContent = "View More";
     }
+  }
+</script>
+<script>
+  function changeLanguage() {
+    const select = document.getElementById("language-select");
+    const url = select.value;
+    window.location.href = url;
   }
 </script>
 </html>
